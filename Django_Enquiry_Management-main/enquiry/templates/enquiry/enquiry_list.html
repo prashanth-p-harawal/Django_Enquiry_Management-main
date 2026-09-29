@@ -1,0 +1,95 @@
+{% extends 'enquiry/base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between mb-4">
+
+    <h2>All Enquiries</h2>
+
+    <a href="/enquiry/" class="btn btn-success">
+        Add New Enquiry
+    </a>
+
+</div>
+
+<table class="table table-bordered table-striped">
+
+    <thead class="table-dark">
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Name</th>
+
+            <th>Email</th>
+
+            <th>Phone</th>
+
+            <th>Subject</th>
+
+            <th>Date</th>
+
+            <th>Actions</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+    {% for enquiry in enquiries %}
+
+        <tr>
+
+            <td>{{ enquiry.id }}</td>
+
+            <td>{{ enquiry.name }}</td>
+
+            <td>{{ enquiry.email }}</td>
+
+            <td>{{ enquiry.phone }}</td>
+
+            <td>{{ enquiry.subject }}</td>
+
+            <td>{{ enquiry.created_at|date:"d M Y" }}</td>
+
+            <td>
+
+                <a href="/edit/{{ enquiry.id }}/"
+                   class="btn btn-warning btn-sm">
+
+                    Edit
+
+                </a>
+
+                <a href="/delete/{{ enquiry.id }}/"
+                   class="btn btn-danger btn-sm">
+
+                    Delete
+
+                </a>
+
+            </td>
+
+        </tr>
+
+    {% empty %}
+
+        <tr>
+
+            <td colspan="7" class="text-center">
+
+                No Enquiries Found
+
+            </td>
+
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,141 @@
+{% extends 'enquiry/base.html' %}
+
+{% block content %}
+
+<!-- Page Header -->
+<div class="bg-info text-white text-center rounded-3 p-5 mb-5">
+    <h1 class="display-5 fw-bold">Contact Us</h1>
+    <p class="lead">
+        We'd love to hear from you. Feel free to contact us anytime.
+    </p>
+</div>
+
+<div class="row">
+
+    <!-- Contact Information -->
+    <div class="col-lg-5 mb-4">
+
+        <div class="card shadow">
+
+            <div class="card-header bg-primary text-white">
+                <h3>Contact Information</h3>
+            </div>
+
+            <div class="card-body">
+
+                <h5>📍 Address</h5>
+                <p>
+                    123 Main Street,<br>
+                    Kalaburagi,<br>
+                    Karnataka - 585101
+                </p>
+
+                <hr>
+
+                <h5>📞 Phone</h5>
+                <p>+91 9876543210</p>
+
+                <hr>
+
+                <h5>📧 Email</h5>
+                <p>info@enquirymanagement.com</p>
+
+                <hr>
+
+                <h5>🌐 Website</h5>
+                <p>www.enquirymanagement.com</p>
+
+                <hr>
+
+                <h5>🕒 Office Hours</h5>
+                <p>
+                    Monday - Saturday<br>
+                    9:00 AM - 6:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Contact Form -->
+    <div class="col-lg-7 mb-4">
+
+        <div class="card shadow">
+
+            <div class="card-header bg-success text-white">
+                <h3>Send a Message</h3>
+            </div>
+
+            <div class="card-body">
+
+                <form>
+
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Enter your name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email"
+                               class="form-control"
+                               placeholder="Enter your email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Phone Number</label>
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Enter your phone">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+
+                        <textarea class="form-control"
+                                  rows="5"
+                                  placeholder="Write your message"></textarea>
+                    </div>
+
+                    <button class="btn btn-success btn-lg">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Google Map -->
+
+<div class="card shadow mt-5">
+
+    <div class="card-header bg-dark text-white">
+        <h3>Our Location</h3>
+    </div>
+
+    <div class="card-body">
+
+        <iframe
+            src="https://www.google.com/maps?q=Kalaburagi,Karnataka&output=embed"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+</div>
+
+{% endblock %}

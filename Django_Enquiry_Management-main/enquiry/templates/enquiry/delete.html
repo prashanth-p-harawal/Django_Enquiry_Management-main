@@ -1,0 +1,45 @@
+{% extends 'enquiry/base.html' %}
+
+{% block content %}
+
+<div class="card shadow">
+
+    <div class="card-body text-center">
+
+        <h2 class="text-danger">
+
+            Delete Enquiry
+
+        </h2>
+
+        <p>
+
+            Are you sure you want to delete
+
+            <strong>{{ enquiry.name }}</strong>?
+
+        </p>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <button class="btn btn-danger">
+
+                Yes, Delete
+
+            </button>
+
+            <a href="/list/" class="btn btn-secondary">
+
+                Cancel
+
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
